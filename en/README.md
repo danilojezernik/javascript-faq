@@ -1,7 +1,7 @@
 ## What is the use of the window object?
 The window object is the global object in a web browser. It represents the browser window or frame containing the HTML document. All global JavaScript objects, functions, and variables automatically become members of the window object. It is used to control the browser window and access its properties and methods, like alert boxes, timeouts, and intervals.
 
-[Example]()
+[Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/1.html)
 
 ## What are the different data types present in JavaScript?
 JavaScript has the following data types:
@@ -14,6 +14,8 @@ JavaScript has the following data types:
 - Object: Represents complex data structures (e.g., { key: "value" }).
 - Symbol: Represents unique identifiers.
 - BigInt: Represents large integers.
+
+[Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/2.html)
 
 ## What is the difference between undefined value and null value?
 Undefined: A variable that is declared but not assigned a value has the value undefined.

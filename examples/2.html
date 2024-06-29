@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What are the different data types present in JavaScript?</title>
+</head>
+<body>
+<h1>JavaScript Data Types</h1>
+<script>
+    // Defining a string variable
+    // A string represents text and is enclosed in quotes
+    let myString = "Hello, World!";
+    console.log("String:", myString);
+
+    // Defining number variables
+    // A number can be an integer or a floating-point value
+    let myNumber = 42; // Integer
+    let myFloat = 3.14; // Floating-point number
+    console.log("Number (Integer):", myNumber);
+    console.log("Number (Float):", myFloat);
+
+    // Defining boolean variables
+    // A boolean represents a true or false value
+    let myBooleanTrue = true; // True value
+    let myBooleanFalse = false; // False value
+    console.log("Boolean (true):", myBooleanTrue);
+    console.log("Boolean (false):", myBooleanFalse);
+
+    // Defining an undefined variable
+    // A variable that has been declared but not assigned a value is undefined
+    let myUndefined;
+    console.log("Undefined:", myUndefined);
+
+    // Defining a null variable
+    // Null represents no value or an empty value
+    let myNull = null;
+    console.log("Null:", myNull);
+
+    // Defining an object
+    // An object is a collection of key-value pairs representing complex data structures
+    let myObject = {
+        name: "Alice",
+        age: 30
+    };
+    console.log("Object:", myObject);
+
+    // Defining a symbol
+    // A symbol is a unique and immutable primitive value used as an identifier
+    let mySymbol = Symbol("uniqueIdentifier");
+    console.log("Symbol:", mySymbol);
+
+    // Defining a BigInt
+    // BigInt is used to represent integers that are too large to be represented by the Number type
+    let myBigInt = BigInt(123456789012345678901234567890);
+    console.log("BigInt:", myBigInt);
+
+    // Displaying all data types in the document
+    // Using innerHTML to dynamically add content to the HTML document
+    document.body.innerHTML += `<p>String: ${myString}</p>`;
+    document.body.innerHTML += `<p>Number (Integer): ${myNumber}</p>`;
+    document.body.innerHTML += `<p>Number (Float): ${myFloat}</p>`;
+    document.body.innerHTML += `<p>Boolean (true): ${myBooleanTrue}</p>`;
+    document.body.innerHTML += `<p>Boolean (false): ${myBooleanFalse}</p>`;
+    document.body.innerHTML += `<p>Undefined: ${myUndefined}</p>`;
+    document.body.innerHTML += `<p>Null: ${myNull}</p>`;
+    document.body.innerHTML += `<p>Object: ${JSON.stringify(myObject)}</p>`;
+    document.body.innerHTML += `<p>Symbol: ${mySymbol.toString()}</p>`;
+    document.body.innerHTML += `<p>BigInt: ${myBigInt}</p>`;
+</script>
+</body>
+</html>
