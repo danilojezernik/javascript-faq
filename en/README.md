@@ -86,3 +86,62 @@ const addExplicit = (a, b) => {
 console.log(addExplicit(2, 3)); // Output: 5
 console.log(add(2, 3)); // Output: 5
 ```
+
+## 8. What is this keyword?
+The this keyword in JavaScript is a special identifier that refers to the object that is currently executing the code. Its value depends on the context in which it is used: global, function, method, or constructor. Here's a breakdown of how this behaves in different contexts with examples:
+
+1. Global Context: In the global execution context (outside any function), this refers to the global object, which is window in browsers.
+```javascript
+console.log(this); // In a browser, this will output the Window object
+```
+
+2. Method Context: When used inside a method, this refers to the object that owns the method.
+```javascript
+const person = {
+    name: 'Alice',
+    greet: function() {
+        console.log(this); // this refers to the person object
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+person.greet(); // Output: person object and "Hello, my name is Alice"
+```
+
+3. Function Context: Non-strict Mode: In non-strict mode, this inside a function refers to the global object (window in browsers).
+```javascript
+function showGlobalThis() {
+    console.log(this); // In a browser, this will output the Window object
+}
+
+showGlobalThis();
+```
+4. Constructor Context: In a constructor function, this refers to the newly created instance of the object.
+```javascript
+function Person(name) {
+    this.name = name;
+    this.greet = function() {
+        console.log(`Hello, my name is ${this.name}`);
+    };
+}
+
+const bob = new Person('Bob');
+bob.greet(); // Output: "Hello, my name is Bob"
+```
+
+5. Arrow Functions: Arrow functions do not have their own this context. Instead, they inherit this from the enclosing scope at the time they are defined.
+
+```javascript
+const obj = {
+    name: 'Charlie',
+    regularFunction: function() {
+        console.log(this.name); // Output: Charlie
+    },
+    arrowFunction: () => {
+        console.log(this.name); // Output: undefined (or global name if defined)
+    }
+};
+
+obj.regularFunction();
+obj.arrowFunction();
+```
