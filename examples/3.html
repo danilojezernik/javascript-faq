@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is the difference between undefined value and null value?</title>
+</head>
+<body>
+<h1>Undefined vs Null Example</h1>
+<script>
+    // Undefined Example
+
+    // 1. Declaring a variable without assigning a value
+    // The variable 'uninitializedVariable' is declared but not initialized, so its value is 'undefined'
+    let uninitializedVariable;
+    console.log("Uninitialized variable (undefined):", uninitializedVariable); // Output: undefined
+
+    // 2. Function without a return statement
+    // The function 'noReturnFunction' does not explicitly return a value, so it returns 'undefined' by default
+    function noReturnFunction() {
+        // No return statement
+    }
+
+    let result = noReturnFunction();
+    console.log("Function without return (undefined):", result); // Output: undefined
+
+    // 3. Accessing a non-existent property of an object
+    // The 'address' property does not exist on 'personObject', so accessing it returns 'undefined'
+    let personObject = {name: "Jane Doe", age: 25};
+    console.log("Non-existent property (undefined):", personObject.address); // Output: undefined
+
+    // Null Example
+
+    // 1. Explicitly assigning null to a variable
+    // The variable 'emptyValue' is explicitly initialized with 'null', representing an intentional absence of value
+    let emptyValue = null;
+    console.log("Explicitly assigned null value:", emptyValue); // Output: null
+
+    // 2. Resetting an object reference
+    // The 'settings' object is initially assigned a value and then reset to 'null' to indicate no settings
+    let settings = {theme: "dark", layout: "grid"};
+    settings = null; // Resetting the object reference to null
+    console.log("Reset object reference (null):", settings); // Output: null
+
+    // 3. Using null to represent an empty or non-existent object
+    // The 'data' variable is set to 'null' to represent that it currently holds no data
+    let data = null;
+    console.log("Empty data value (null):", data); // Output: null
+
+    // Displaying the values and their types in the document
+    document.body.innerHTML += `<p>Uninitialized variable (undefined): ${uninitializedVariable}</p>`;
+    document.body.innerHTML += `<p>Function without return (undefined): ${result}</p>`;
+    document.body.innerHTML += `<p>Non-existent property (undefined): ${personObject.address}</p>`;
+    document.body.innerHTML += `<p>Explicitly assigned null value: ${emptyValue}</p>`;
+    document.body.innerHTML += `<p>Reset object reference (null): ${settings}</p>`;
+    document.body.innerHTML += `<p>Empty data value (null): ${data}</p>`;
+</script>
+</body>
+</html>

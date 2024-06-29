@@ -21,6 +21,8 @@ JavaScript has the following data types:
 Undefined: A variable that is declared but not assigned a value has the value undefined.
 Null: Represents a deliberate non-value or empty value. It is assigned explicitly.
 
+[Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/3.html)
+
 ## What is this [[[ ]]]?
 This likely represents a nested array structure. For example, [[[ ]]] is an array containing an array that contains another empty array. 
 
