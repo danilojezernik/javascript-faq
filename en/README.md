@@ -1,6 +1,8 @@
 ## What is the use of the window object?
 The window object is the global object in a web browser. It represents the browser window or frame containing the HTML document. All global JavaScript objects, functions, and variables automatically become members of the window object. It is used to control the browser window and access its properties and methods, like alert boxes, timeouts, and intervals.
 
+[Example]()
+
 ## What are the different data types present in JavaScript?
 JavaScript has the following data types:
 
