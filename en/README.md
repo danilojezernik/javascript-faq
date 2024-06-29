@@ -77,7 +77,8 @@ console.log(add(2, 3)); // Output: 5
 const add = (a, b) => a + b;
 
 // Arrow function with explicit return (using curly braces)
-// This arrow function includes the curly braces {}. Inside the braces, you must use the return keyword to return a value explicitly
+// This arrow function includes the curly braces {}.
+// Inside the braces, you must use the return keyword to return a value explicitly
 const addExplicit = (a, b) => {
   return a + b;
 };
