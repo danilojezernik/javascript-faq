@@ -24,7 +24,9 @@ Null: Represents a deliberate non-value or empty value. It is assigned explicitl
 [Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/3.html)
 
 ## What is this [[[ ]]]?
-This likely represents a nested array structure. For example, [[[ ]]] is an array containing an array that contains another empty array. 
+This represents a nested array structure. For example, [[[ ]]] is an array containing an array that contains another empty array. 
+
+[Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/4.html)
 
 ## What are classes in ES6?
 Classes in ES6 (ECMAScript 2015) are a way to create objects and deal with inheritance more cleanly. They provide a blueprint for creating objects with predefined properties and methods. Example:
