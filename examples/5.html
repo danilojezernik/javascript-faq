@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage Example</title>
+</head>
+<body>
+<h1>Web Storage Example</h1>
+<script>
+    // Cookies Example
+
+    // Setting a cookie with name "username" and value "JohnDoe"
+    // This cookie will expire in 7 days (max-age is set to 7*24*60*60 seconds)
+    // Cookies are sent to the server with every HTTP request and can be used for server-side tracking
+    document.cookie = "username=JohnDoe; max-age=" + 7*24*60*60 + "; path=/";
+
+    // Getting all cookies
+    // The document.cookie returns all cookies as a single string, separated by semicolons
+    console.log("Cookies:", document.cookie); // Output: Cookies: PHPSESSID=0nebup0qs8btrjmn13skn10gc6; username=JohnDoe
+    // The PHPSESSID cookie is a session identifier used by PHP to manage user sessions.
+    // When you see something like PHPSESSID=0nebup0qs8btrjmn13skn10gc6 in your cookies, it indicates that a PHP session has been created for you on the server
+
+    // Local Storage Example
+
+    // Setting an item in local storage with key "username" and value "JohnDoe"
+    // Local storage persists even after the browser is closed and reopened
+    // It is accessible from any page on the same domain
+    localStorage.setItem("username", "JohnDoe");
+
+    // Getting the item from local storage
+    // Local storage items are key-value pairs stored in the browser
+    let localStorageValue = localStorage.getItem("username");
+    console.log("Local Storage:", localStorageValue); // Output: Local Storage: JohnDoe
+
+    // Session Storage Example
+
+    // Setting an item in session storage with key "username" and value "JohnDoe"
+    // Session storage persists only for the duration of the page session (i.e., until the browser or tab is closed)
+    // It is accessible only from the page that created it
+    sessionStorage.setItem("username", "JohnDoe");
+
+    // Getting the item from session storage
+    // Session storage items are also key-value pairs stored in the browser
+    let sessionStorageValue = sessionStorage.getItem("username");
+    console.log("Session Storage:", sessionStorageValue); // Output: Session Storage: JohnDoe
+
+    // Clearing the local and session storage for demonstration purposes
+    // This removes all items from local storage and session storage
+    localStorage.clear();
+    sessionStorage.clear();
+</script>
+</body>
+</html>

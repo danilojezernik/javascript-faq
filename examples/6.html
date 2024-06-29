@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SetInterval and SetTimeout</title>
+</head>
+<body>
+<h1>What is the difference between setInterval and setTimeout?</h1>
+<script>
+
+    // Function to start the interval action
+    function startInterval() {
+        // Start an interval that runs every 4 seconds
+
+        let interval = setInterval(() => {
+            console.log('Interval every 4 seconds');
+
+            // Action to be executed every second within the 4-second interval
+            let action = setInterval(() => {
+                console.log('Action every second for 1 second');
+            }, 1000); // This interval runs every 1 second
+
+            // Stop the inner action after 1 second
+            setTimeout(() => {
+                clearInterval(action); // Clears the inner interval
+                clearInterval(interval); // Clears the outer interval
+                console.log('Action stopped');
+            }, 1000); // Stops the action after 1 second
+
+        }, 4000); // The outer interval runs every 4 seconds
+
+        // Note: The outer interval continues to run indefinitely.
+        // To stop the interval, you can use clearInterval(<interval>) when needed.
+    }
+
+    // Start the interval process by calling the function
+    startInterval();
+</script>
+</body>
+</html>
