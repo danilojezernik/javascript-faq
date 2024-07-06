@@ -764,3 +764,83 @@ console.log(remaining); // Output: { c: 3, d: 4 }
 ```
 
 The spread and rest operators in JavaScript offer a flexible and concise way to work with arrays and objects. The spread operator expands elements, making it useful for copying, merging, and passing elements, while the rest operator collects elements into arrays or objects, making it ideal for functions that handle variable numbers of arguments and for destructuring. Understanding these operators can significantly improve the readability and maintainability of your code.
+
+## 17. What is function currying?
+
+Function currying is a technique of transforming a function that takes multiple arguments into a sequence of functions that each take a single argument. Example:
+
+```javascript
+function add(a) {
+  return function(b) {
+    return a + b;
+  }
+}
+
+let add5 = add(5);
+console.log(add5(3)); // Output: 8
+```
+
+## 18.  Difference between let and var?
+
+- `let`: is block-scoped, does not get hoisted to the top of the block, cannot be re-declared in the same scope, and does not create a global object property when declared globally.
+
+```javascript
+function letExample() {
+    // console.log(letVariable); // Uncommenting this line will throw a ReferenceError
+    let letVariable = 'I am a let variable';
+    console.log(letVariable); // Outputs: 'I am a let variable'
+    
+    if (true) {
+        let letVariable = 'I am a new let variable';
+        console.log(letVariable); // Outputs: 'I am a new let variable' (different variable within this block)
+    }
+    
+    console.log(letVariable); // Outputs: 'I am a let variable' (original variable outside the block)
+}
+
+letExample();
+```
+
+- `var`: is function-scoped, gets hoisted to the top of its function, can be re-declared in the same scope, and creates a global object property when declared globally.
+
+```javascript
+function varExample() {
+    console.log(varVariable); // Outputs: undefined (due to hoisting)
+    var varVariable = 'I am a var variable';
+    console.log(varVariable); // Outputs: 'I am a var variable'
+    
+    if (true) {
+        var varVariable = 'I am still a var variable';
+        console.log(varVariable); // Outputs: 'I am still a var variable'
+    }
+    
+    console.log(varVariable); // Outputs: 'I am still a var variable' (same variable in the whole function scope)
+}
+
+varExample();
+```
+
+- `const`: is block-scoped, not hoisted to the top of the block, cannot be re-declared in the same scope, must be assigned a value at declaration, cannot be reassigned, but the contents of objects or arrays can be mutated.
+
+```javascript
+function constExample() {
+    // console.log(constVariable); // Uncommenting this line will throw a ReferenceError
+    const constVariable = 'I am a const variable';
+    console.log(constVariable); // Outputs: 'I am a const variable'
+    
+    if (true) {
+        const constVariable = 'I am a new const variable';
+        console.log(constVariable); // Outputs: 'I am a new const variable' (different variable within this block)
+    }
+    
+    console.log(constVariable); // Outputs: 'I am a const variable' (original variable outside the block)
+
+    // constVariable = 'New value'; // Uncommenting this line will throw a TypeError
+
+    const constObject = { key: 'value' };
+    constObject.key = 'new value'; // Allowed
+    console.log(constObject.key); // Outputs: 'new value'
+}
+
+constExample();
+```
