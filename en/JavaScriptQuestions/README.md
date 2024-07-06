@@ -846,3 +846,18 @@ function constExample() {
 
 constExample();
 ```
+
+## 19. How do you add an event listener to an element?
+## 20. How can you prevent the default behavior of an event in JavaScript?
+## 21. What are the different ways to declare a function in JavaScript?
+## 22. What is the difference between function declarations and function expressions?
+## 23. How do you create an array in JavaScript?
+## 24. What are the different ways to copy an object in JavaScript?
+## Explain the concept of asynchronous programming in JavaScript.
+## What are async and await, and how do they work?
+## What is the event loop in JavaScript?
+## What is npm, and why is it useful?
+## What is the purpose of a package.json file?
+## Explain how you would debug a JavaScript application.
+## How do you add an element to the beginning/end of an array?
+## How do you iterate over an array?
