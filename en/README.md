@@ -1,11 +1,13 @@
 1. [What is the use of the window object?](#1-what-is-the-use-of-the-window-object)
 2. [What are the different data types present in JavaScript?](#2-what-are-the-different-data-types-present-in-javascript)
 3. [What is the difference between undefined value and null value?](#3-what-is-the-difference-between-undefined-value-and-null-value)
-4. [What is this [[[ ]]]?](#4-what-is-this-)
-
-
-
-
+4. [What is this [[[ ]]]?](#4-what-is-this)
+5. [What are the differences between cookie, local storage, and session storage?](#5-what-are-the-differences-between-cookie-local-storage-and-session-storage)
+6. [What is the difference between setInterval and setTimeout?](#6-what-is-the-difference-between-setinterval-and-settimeout)
+7. [What are arrow functions? How are they different from normal functions?](#7-what-are-arrow-functions-how-are-they-different-from-normal-functions)
+8. [What is this keyword?](#8-what-is-this-keyword)
+9. [What are promises? How do you call a promise?](#9-what-are-promises-how-do-you-call-a-promise)
+10. [What is callback hell?](#10-what-is-callback-hell)
 
 ## 1. What is the use of the window object?
 
@@ -37,7 +39,7 @@ Null: Represents a deliberate non-value or empty value. It is assigned explicitl
 
 [Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/3.html)
 
-## 4. What is this [[[ ]]]?
+<h2 id="4-what-is-this">4. What is this [[[ ]]]?</h2>
 
 This represents a nested array structure. For example, [[[ ]]] is an array containing an array that contains another
 empty array.
