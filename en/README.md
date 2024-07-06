@@ -14,6 +14,8 @@
 14. [What are higher order functions?](#14-what-are-higher-order-functions)
 15. [Explain destructuring in JavaScript!](#15-explain-destructuring-in-javascript)
 16. [What are spread and rest operators?](#16-what-are-spread-and-rest-operators)
+17. [What is function currying?](#17-what-is-function-currying)
+18. [Difference between `let`, `var` and `const`?](#let-war-const)
 
 ## 1. What is the use of the window object?
 
@@ -780,7 +782,7 @@ let add5 = add(5);
 console.log(add5(3)); // Output: 8
 ```
 
-## 18.  Difference between let and var?
+<h2 id="let-war-const">18. Difference between `let`, `var` and `const`?</h2>
 
 - `let`: is block-scoped, does not get hoisted to the top of the block, cannot be re-declared in the same scope, and does not create a global object property when declared globally.
 
