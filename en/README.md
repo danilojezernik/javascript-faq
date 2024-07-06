@@ -88,7 +88,7 @@ console.log(add(2, 3)); // Output: 5
 ```
 
 ## 8. What is this keyword?
-The this keyword in JavaScript is a special identifier that refers to the object that is currently executing the code. Its value depends on the context in which it is used: global, function, method, or constructor. Here's a breakdown of how this behaves in different contexts with examples:
+The `this` keyword in JavaScript is a special identifier that refers to the object that is currently executing the code. Its value depends on the context in which it is used: global, function, method, or constructor. Here's a breakdown of how this behaves in different contexts with examples:
 
 1. Global Context: In the global execution context (outside any function), this refers to the global object, which is window in browsers.
 ```javascript
