@@ -1,4 +1,19 @@
-## 1. What is the use of the window object?
+1. [What is the use of the window object?](#what-is-the-use-of-the-window-object)
+2. [What are the different data types present in JavaScript?](#what-are-the-different-data-types-present-in-javascript)
+3. What is the difference between undefined value and null value?
+4. What is this [[[ ]]]?
+
+
+
+
+
+
+
+
+
+
+
+# 1. What is the use of the window object? 
 
 The window object is the global object in a web browser. It represents the browser window or frame containing the HTML
 document. All global JavaScript objects, functions, and variables automatically become members of the window object. It
@@ -6,7 +21,7 @@ is used to control the browser window and access its properties and methods, lik
 
 [Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/1.html)
 
-## 2. What are the different data types present in JavaScript?
+# 2. What are the different data types present in JavaScript?
 
 JavaScript has the following data types:
 
