@@ -63,11 +63,13 @@ setTimeout(() => console.log("Hello"), 1000);
 [Example](https://github.com/danilojezernik/js-interview-30/blob/master/examples/6.html)
 
 ## 7. What are arrow functions? How are they different from normal functions?
-Arrow functions are a shorthand way to write functions in JavaScript. They are more concise and do not have their own this context. Example:
+
+Arrow functions are a shorthand way to write functions in JavaScript. They are more concise and do not have their own
+this context. Example:
 
 ```javascript
 // Traditional function expression
-const add = function(a, b) {
+const add = function (a, b) {
     return a + b;
 };
 
@@ -80,7 +82,7 @@ const add = (a, b) => a + b;
 // This arrow function includes the curly braces {}.
 // Inside the braces, you must use the return keyword to return a value explicitly
 const addExplicit = (a, b) => {
-  return a + b;
+    return a + b;
 };
 
 console.log(addExplicit(2, 3)); // Output: 5
@@ -88,18 +90,24 @@ console.log(add(2, 3)); // Output: 5
 ```
 
 ## 8. What is this keyword?
-The `this` keyword in JavaScript is a special identifier that refers to the object that is currently executing the code. Its value depends on the context in which it is used: global, function, method, or constructor. Here's a breakdown of how this behaves in different contexts with examples:
 
-1. Global Context: In the global execution context (outside any function), this refers to the global object, which is window in browsers.
+The `this` keyword in JavaScript is a special identifier that refers to the object that is currently executing the code.
+Its value depends on the context in which it is used: global, function, method, or constructor. Here's a breakdown of
+how this behaves in different contexts with examples:
+
+1. **Global Context**: In the global execution context (outside any function), this refers to the global object, which
+   is window in browsers.
+
 ```javascript
 console.log(this); // In a browser, this will output the Window object
 ```
 
-2. Method Context: When used inside a method, this refers to the object that owns the method.
+2. **Method Context**: When used inside a method, this refers to the object that owns the method.
+
 ```javascript
 const person = {
     name: 'Alice',
-    greet: function() {
+    greet: function () {
         console.log(this); // this refers to the person object
         console.log(`Hello, my name is ${this.name}`);
     }
@@ -108,7 +116,9 @@ const person = {
 person.greet(); // Output: person object and "Hello, my name is Alice"
 ```
 
-3. Function Context: Non-strict Mode: In non-strict mode, this inside a function refers to the global object (window in browsers).
+3. **Function Context**: Non-strict Mode: In non-strict mode, this inside a function refers to the global object (window
+   in browsers).
+
 ```javascript
 function showGlobalThis() {
     console.log(this); // In a browser, this will output the Window object
@@ -116,11 +126,13 @@ function showGlobalThis() {
 
 showGlobalThis();
 ```
-4. Constructor Context: In a constructor function, this refers to the newly created instance of the object.
+
+4. **Constructor Context**: In a constructor function, this refers to the newly created instance of the object.
+
 ```javascript
 function Person(name) {
     this.name = name;
-    this.greet = function() {
+    this.greet = function () {
         console.log(`Hello, my name is ${this.name}`);
     };
 }
@@ -129,12 +141,13 @@ const bob = new Person('Bob');
 bob.greet(); // Output: "Hello, my name is Bob"
 ```
 
-5. Arrow Functions: Arrow functions do not have their own this context. Instead, they inherit this from the enclosing scope at the time they are defined.
+5. **Arrow Functions**: Arrow functions do not have their own this context. Instead, they inherit this from the
+   enclosing scope at the time they are defined.
 
 ```javascript
 const obj = {
     name: 'Charlie',
-    regularFunction: function() {
+    regularFunction: function () {
         console.log(this.name); // Output: Charlie
     },
     arrowFunction: () => {
@@ -145,3 +158,149 @@ const obj = {
 obj.regularFunction();
 obj.arrowFunction();
 ```
+
+## 9. What are promises? How do you call a promise?
+
+Promises are a foundational part of asynchronous programming in JavaScript. They provide a cleaner, more robust way to
+handle operations that may complete at some future time, compared to traditional callback-based approaches. A Promise
+represents a value that might be available now, in the future, or never.
+
+Promises are a way to handle asynchronous operations in JavaScript. They represent a value that may be available now, in
+the future, or never. Promises have three states:
+
+- **Pending**: The initial state, neither fulfilled nor rejected.
+- **Fulfilled**: The operation completed successfully.
+- **Rejected**: The operation failed.
+
+### Key Methods:
+
+- **then()**: Attaches callbacks for the fulfillment and rejection of the Promise.
+- **catch()**: Attaches a callback for only the rejection of the Promise.
+
+### Basic Example:
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+    // Simulating an asynchronous operation (e.g., network request)
+    setTimeout(() => {
+        const success = true;
+        if (success) {
+            resolve('Operation succeeded');
+        } else {
+            reject('Operation failed');
+        }
+    }, 2000);
+});
+
+promise.then(result => {
+    console.log(result); // 'Operation succeeded'
+})
+    .catch(error => {
+        console.error(error); // 'Operation failed'
+    });
+```
+
+### Real-World Examples:
+
+1. **Fetching Data from an API**:
+
+```javascript
+fetch('https://api.example.com/data')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data fetched:', data);
+    })
+    .catch(error => {
+        console.error('Fetching data failed:', error);
+    });
+```
+
+2. **Reading a File**:
+
+```javascript
+const fs = require('fs').promises;
+
+fs.readFile('path/to/file.txt', 'utf8')
+    .then(contents => {
+        console.log('File contents:', contents);
+    })
+    .catch(error => {
+        console.error('Reading file failed:', error);
+    });
+```
+
+3. **Sequential Asynchronous Operations**:
+
+Imagine a scenario where you need to perform multiple asynchronous operations in sequence, such as first authenticating
+a user and then fetching their profile data:
+
+```javascript
+function authenticateUser(credentials) {
+
+    return new Promise((resolve, reject) => {
+        // Simulate an asynchronous authentication API call
+        setTimeout(() => {
+            if (credentials.username === 'user' && credentials.password === 'pass') {
+                resolve('Auth token');
+            } else {
+                reject('Authentication failed');
+            }
+        }, 1000);
+    });
+}
+
+function fetchUserProfile(authToken) {
+    return new Promise((resolve, reject) => {
+        // Simulate an asynchronous profile fetch API call
+        setTimeout(() => {
+            if (authToken === 'Auth token') {
+                resolve({name: 'John Doe', age: 30});
+            } else {
+                reject('Invalid auth token');
+            }
+        }, 1000);
+    });
+}
+
+const credentials = {username: 'user', password: 'pass'};
+
+authenticateUser(credentials)
+    .then(authToken => {
+        console.log('Authenticated successfully');
+        return fetchUserProfile(authToken);
+    })
+    .then(profile => {
+        console.log('User profile fetched:', profile);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+```
+
+4. Handling Multiple Promises Concurrently:
+   Using Promise.all to wait for multiple asynchronous operations to complete:
+
+```javascript
+const promise1 = fetch('https://api.example.com/data1').then(response => response.json());
+const promise2 = fetch('https://api.example.com/data2').then(response => response.json());
+
+Promise.all([promise1, promise2])
+    .then(results => {
+        console.log('Both data fetched:', results);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+
+```
+
+Promises are a powerful feature for managing asynchronous operations in JavaScript, making the code more readable and
+easier to maintain. They handle asynchronous events in a way that is much more manageable than traditional
+callback-based approaches.
+
+## 10. What is callback hell?
