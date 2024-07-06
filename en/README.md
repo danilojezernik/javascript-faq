@@ -1,7 +1,7 @@
 1. [What is the use of the window object?](#1-what-is-the-use-of-the-window-object)
 2. [What are the different data types present in JavaScript?](#2-what-are-the-different-data-types-present-in-javascript)
 3. [What is the difference between undefined value and null value?](#3-what-is-the-difference-between-undefined-value-and-null-value)
-4. [What is this [[[ ]]]?](#4-what-is-this-[[[]]])
+4. [What is this [[[ ]]]?](#4-what-is-this)
 
 
 
