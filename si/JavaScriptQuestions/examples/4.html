@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Array Structure Example</title>
+</head>
+<body>
+<h1>Nested Array Structure Example</h1>
+<script>
+    // Defining a nested array structure
+    // Here, we have an array that contains another array, which itself contains yet another empty array.
+    let nestedArray = [[[ ]]];
+
+    // Logging the entire nested array to the console
+    // This will display the full structure of the nested array in the console.
+    console.log("Nested Array:", nestedArray); // Output: [[[ ]]]
+
+    // Accessing the innermost array
+    // We are drilling down three levels to access the innermost empty array.
+    let innermostArray = nestedArray[0][0][0];
+    console.log("Innermost Array:", innermostArray); // Output: []
+
+    // Checking the length of each level of the nested array
+    // The outermost array contains one element.
+    console.log("Length of outermost array:", nestedArray.length); // Output: 1
+
+    // The middle array (nested inside the outermost array) also contains one element.
+    console.log("Length of middle array:", nestedArray[0].length); // Output: 1
+
+    // The innermost array is empty initially, so its length is zero.
+    console.log("Length of innermost array initially:", nestedArray[0][0].length); // Output: 0
+
+    // Adding elements to the innermost array
+    // We are adding two elements to the innermost array.
+    nestedArray[0][0][0] = "Element 1"; // First element at the innermost level
+    nestedArray[0][0][1] = "Element 2"; // Second element at the innermost level
+    console.log("Nested Array after adding elements:", nestedArray); // Output: [[[ 'Element 1', 'Element 2' ]]]
+
+    // Checking the length of the innermost array after adding elements
+    // Now, the innermost array contains two elements, so its length is two.
+    console.log("Length of innermost array after adding elements:", nestedArray[0][0].length); // Output: 2
+
+    // Displaying the nested array structure on the web page
+    // We use innerHTML to add text to the HTML document, showing the structure of the nested array.
+    document.body.innerHTML += `<p>Nested Array: ${JSON.stringify(nestedArray)}</p>`;
+    document.body.innerHTML += `<p>Innermost Array: ${JSON.stringify(nestedArray[0][0])}</p>`;
+    document.body.innerHTML += `<p>Length of outermost array: ${nestedArray.length}</p>`;
+    document.body.innerHTML += `<p>Length of middle array: ${nestedArray[0].length}</p>`;
+    document.body.innerHTML += `<p>Length of innermost array: 0</p>`;
+    document.body.innerHTML += `<p>Length of innermost array after adding elements: ${nestedArray[0][0].length}</p>`;
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is the use of the window object?</title>
+</head>
+<body>
+
+<h1>Window Object Example</h1>
+
+<!-- Adding some buttons to demonstrate the use of the window object -->
+<button id="alertButton">Show Alert</button>
+<button id="timeoutButton">Timeout Button</button>
+<button id="intervalButton">Set Interval</button>
+
+<script>
+    // Accessing the window object directly and logging it to the console
+    // The window object represents the browser window and provides many useful properties and methods
+    console.log("Window Object:", window)
+
+    // Adding an event listener to the button with the ID 'alertButton'
+    // When the button is clicked, an alert box will be shown
+    document.getElementById('alertButton').addEventListener("click", () => {
+        // Using the window.alert() method to display an alert box with a message
+        window.alert("This is an alert box!")
+    })
+
+    // Adding an event listener to the button with the ID 'timeoutButton'
+    // When the button is clicked, a function will be executed after a specified delay
+    document.getElementById('timeoutButton').addEventListener('click', () => {
+        // Using the window.setTimeout() method to execute a function after a specified delay
+        window.setTimeout(() => {
+            // Displaying an alert box after a delay of 2 seconds
+            alert("This message is displayed after 2 seconds.")
+        }, 2000) // Delay of 2000 milliseconds (2 seconds)
+    })
+
+    // Adding an event listener to the button with the ID 'intervalButton'
+    // When the button is clicked, a function will be executed at regular intervals
+    document.getElementById('intervalButton').addEventListener('click', () => {
+        let count = 0; // Initializing a counter variable
+
+        // Using the window.setInterval() method to execute a function repeatedly at specified intervals
+        const intervalId = window.setInterval(() => {
+            count += 1; // Incrementing the counter
+            console.log("Interval count: " + count); // Logging the current count to the console
+
+            // Checking if the counter has reached 5
+            if (count >= 5) {
+                window.clearInterval(intervalId); // Clearing the interval to stop further execution
+                alert("Interval cleared after 5 iterations."); // Displaying an alert box
+            }
+        }, 1000); // Interval of 1000 milliseconds (1 second)
+    });
+
+    // Accessing the location property of the window object
+    // The location property contains information about the current URL of the document
+    console.log("Current URL:", window.location.href);
+
+    // Accessing the navigator object of the window
+    // The navigator object contains information about the browser, such as the user agent string
+    console.log("User Agent:", window.navigator.userAgent);
+
+    // Accessing the document object of the window
+    // The document object represents the HTML document loaded in the window
+    // Here, we are logging the title of the document
+    console.log("Document Title:", window.document.title);
+</script>
+
+</body>
+</html>
