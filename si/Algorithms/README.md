@@ -1,48 +1,48 @@
-For an interview, you can expect to be asked about a variety of algorithms and data structures. Here are some common ones:
+Za intervju lahko pričakujete vprašanja o različnih algoritmih in podatkovnih strukturah. Tukaj je nekaj pogostih:
 
-## Sorting Algorithms
-1. Bubble Sort - Simple sorting algorithm with O(n^2) complexity. [More]()
-2. Insertion Sort - Builds the final sorted array one item at a time, O(n^2) complexity.
-3. Selection Sort - Divides the input list into two parts: a sorted and an unsorted part, O(n^2) complexity.
-4. Merge Sort - A divide and conquer algorithm, O(n log n) complexity.
-5. Quick Sort - Another divide and conquer algorithm, average O(n log n) complexity.
+## Algoritmi za urejanje
+1. Mehurčasto urejanje - Preprost algoritem za urejanje s kompleksnostjo O(n^2). [Podrobneje ->](https://github.com/danilojezernik/js-interview-30/tree/master/si/Algorithms/sorting-algorithms/bubble-sort)
+2. Vstavljalno urejanje - Gradi končni urejen seznam po en element naenkrat, kompleksnost O(n^2).
+3. Izbiralno urejanje - Deli vhodni seznam na dva dela: urejeni in neurejeni del, kompleksnost O(n^2).
+4. Zlivno urejanje - Algoritem deli in vlada, kompleksnost O(n log n).
+5. Hitro urejanje - Še en algoritem deli in vlada, povprečna kompleksnost O(n log n).
 
-## Searching Algorithms
-1. Linear Search - Searches for an element sequentially, O(n) complexity.
-2. Binary Search - Searches in a sorted array by repeatedly dividing the search interval in half, O(log n) complexity.
+## Algoritmi za iskanje
+1. Linearno iskanje - Iskanje elementa zaporedno, kompleksnost O(n).
+2. Binarno iskanje - Iskanje v urejenem seznamu z večkratnim deljenjem iskalnega intervala na polovico, kompleksnost O(log n).
 
-## Data Structures and Related Algorithms
-1. Arrays - Basic operations like insertion, deletion, and accessing elements.
-2. Linked Lists - Operations like traversal, insertion, and deletion.
-    - Singly Linked List
-    - Doubly Linked List
-3. Stacks and Queues - Basic operations (push, pop, enqueue, dequeue).
-4. Hash Tables - Basic operations (insertion, deletion, search).
-5. Trees - Basic operations (insertion, deletion, traversal).
-    - Binary Trees
-    - Binary Search Trees (BST)
-6. Graphs - Basic algorithms like Depth-First Search (DFS) and Breadth-First Search (BFS).
+## Podatkovne strukture in povezani algoritmi
+1. Polja - Osnovne operacije kot so vstavljanje, brisanje in dostopanje do elementov.
+2. Povezani seznami - Operacije kot so prehajanje, vstavljanje in brisanje.
+   - Enosmerno povezani seznam
+   - Dvosmerno povezani seznam
+3. Skladi in vrste - Osnovne operacije (potisni, odstrani, vvrsti, izvrsti).
+4. Zgoščevalne tabele - Osnovne operacije (vstavljanje, brisanje, iskanje).
+5. Drevesa - Osnovne operacije (vstavljanje, brisanje, prehajanje).
+   - Binarna drevesa
+   - Binarna iskalna drevesa (BST)
+6. Grafi - Osnovni algoritmi kot sta globinsko iskanje (DFS) in širinsko iskanje (BFS).
 
-## Basic Dynamic Programming and Recursion
-1. Fibonacci Sequence - Using both recursion and dynamic programming.
-2. Factorial Calculation - Using recursion.
+## Osnovno dinamično programiranje in rekurzija
+1. Fibonaccijevo zaporedje - Uporaba rekurzije in dinamičnega programiranja.
+2. Izračun fakultete - Uporaba rekurzije.
 
-## String Manipulation Algorithms
-1. Palindrome Check - Determine if a string reads the same backward as forward.
-2. Anagram Check - Determine if two strings are anagrams of each other.
+## Algoritmi za manipulacijo z nizi
+1. Preverjanje palindroma - Določite, ali niz bere enako naprej in nazaj.
+2. Preverjanje anagrama - Določite, ali sta dva niza anagrama drug drugega.
 
-## Basic Algorithmic Problems
-1. Two Sum Problem - Finding two numbers in an array that add up to a specific target.
-2. Reverse a String - Reversing a given string.
-3. Find Maximum/Minimum in an Array - Simple linear search for max/min value.
-4. Basic Matrix Operations - Transpose of a matrix, rotation of a matrix.
+## Osnovni algoritmični problemi
+1. Problem dveh vsot - Iskanje dveh števil v polju, ki skupaj tvorita določen cilj.
+2. Obrni niz - Obrnite podani niz.
+3. Najdi maksimum/minimum v polju - Preprosto linearno iskanje za največjo/najmanjšo vrednost.
+4. Osnovne operacije z matrikami - Transponiranje matrike, rotacija matrike.
 
-## Basic Mathematical Algorithms
-1. Prime Number Check - Determine if a number is prime.
-2. Greatest Common Divisor (GCD) - Using the Euclidean algorithm.
+## Osnovni matematični algoritmi
+1. Preverjanje praštevil - Določite, ali je število praštevilo.
+2. Največji skupni delitelj (GCD) - Uporaba Evklidovega algoritma.
 
-## Tips for Preparation
-1. Understand the Time and Space Complexity - Be able to explain the Big-O notation for your algorithms.
-2. Practice Coding - Use platforms like LeetCode, HackerRank, or CodeSignal.
-3. Mock Interviews - Practice with friends or use online mock interview platforms.
-4. Explain Your Thought Process - Interviewers often look for how you approach and solve problems, not just the final solution.
+## Nasveti za pripravo
+1. Razumejte časovno in prostorsko kompleksnost - Bodite sposobni razložiti Big-O notacijo za vaše algoritme.
+2. Vadite kodiranje - Uporabite platforme kot so LeetCode, HackerRank ali CodeSignal.
+3. Simulirajte intervjuje - Vadite s prijatelji ali uporabite spletne platforme za simulacijo intervjujev.
+4. Razložite vaš miselni proces - Intervjuji pogosto gledajo na to, kako pristopite k reševanju problemov, ne le na končno rešitev.
