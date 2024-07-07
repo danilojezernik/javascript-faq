@@ -13,30 +13,32 @@ Kako deluje algoritem mehurčastega urejanja:
 
 ### Implementacija mehurčkastega urejanja v JavaScript
 ```javascript
-// Algoritem mehurčastega urejanja
-function mehurckastoUrejanje(arr) {
-    // Pridobimo dolžino seznama
-    let n = arr.length;
+function mehurcastoUrejanje(arr) {
+  // Pridobimo dolžino seznama
+  let n = arr.length;
 
-    // Zunanja zanka: iteriramo čez celoten seznam
-    for (let i = 0; i < n; i++) {
-        // Notranja zanka: iteriramo do zadnjega neurejenega elementa
-        for (let j = 0; j < n - i - 1; j++) {
-            // Primerjamo trenutni element z naslednjim
-            if (arr[j] > arr[j + 1]) {
-                // Zamenjamo elemente, če so v napačnem vrstnem redu
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-            }
-        }
+  // Zunanja zanka: iteriramo čez celoten seznam
+  for (let i = 0; i < n; i++) {
+    // Notranja zanka: iteriramo do zadnjega neurejenega elementa
+    for (let j = 0; j < n - i - 1; j++) {
+      // Primerjamo trenutni element z naslednjim
+      if (arr[j] > arr[j + 1]) {
+        // Če je trenutni element večji od naslednjega, ju zamenjamo
+        // Uporabimo destrukturiranje za zamenjavo elementov
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
     }
-    // Vrne urejeni seznam
-    return arr;
+    // Po vsaki iteraciji zunanje zanke je največji element nameščen na pravilno mesto
+    // S tem se zmanjša število elementov, ki jih je treba primerjati v naslednji iteraciji
+  }
+  // Vrne urejeni seznam
+  return arr;
 }
 
 // Primer uporabe funkcije mehurcastega urejanja
-let seznam = [64, 34, 25, 12, 22, 11, 90];
-let urejenSeznam = mehurcastoUrejanje(seznam);
-console.log("Urejen seznam:", urejenSeznam);
+let seznam = [64, 34, 25, 12, 22, 11, 90]; // Ustvarimo neurejen seznam
+let urejenSeznam = mehurcastoUrejanje(seznam); // Uporabimo funkcijo za urejanje seznama
+console.log("Urejen seznam:", urejenSeznam); // Izpišemo urejeni seznam
 ```
 
 ### Podrobna razlaga

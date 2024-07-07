@@ -14,28 +14,32 @@ Here's a step-by-step breakdown of how the Bubble Sort algorithm works:
 ### Bubble Sort Implementation in JavaScript
 ```javascript
 function bubbleSort(arr) {
-    // Get the length of the array
-    let n = arr.length;
+  // Get the length of the array
+  let n = arr.length;
 
-    // Outer loop: iterate over the entire array
-    for (let i = 0; i < n; i++) {
-        // Inner loop: iterate up to the last unsorted element
-        for (let j = 0; j < n - i - 1; j++) {
-            // Compare the current element with the next element
-            if (arr[j] > arr[j + 1]) {
-                // Swap the elements if they are in the wrong order
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-            }
-        }
+  // Outer loop: iterate over the entire array
+  for (let i = 0; i < n; i++) {
+    // Inner loop: iterate up to the last unsorted element
+    for (let j = 0; j < n - i - 1; j++) {
+      // Compare the current element with the next element
+      if (arr[j] > arr[j + 1]) {
+        // If the current element is greater than the next element, swap them
+        // Use array destructuring to swap elements
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
     }
-    // Return the sorted array
-    return arr;
+    // After each iteration of the outer loop, the largest element is placed in its correct position
+    // This reduces the number of elements to be compared in the next iteration
+  }
+  // Return the sorted array
+  return arr;
 }
 
-// Example usage of bubbleSort function
-let arr = [64, 34, 25, 12, 22, 11, 90];
-let sortedArr = bubbleSort(arr);
-console.log("Sorted array:", sortedArr);
+// Example usage of the bubbleSort function
+let arr = [64, 34, 25, 12, 22, 11, 90]; // Create an unsorted array
+let sortedArr = bubbleSort(arr); // Use the function to sort the array
+console.log("Sorted array:", sortedArr); // Print the sorted array
+
 ```
 
 ### Detailed Explanation
