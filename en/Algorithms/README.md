@@ -1,7 +1,7 @@
 For an interview, you can expect to be asked about a variety of algorithms and data structures. Here are some common ones:
 
 ## Sorting Algorithms
-1. Bubble Sort - Simple sorting algorithm with O(n^2) complexity. [More]()
+1. Bubble Sort - Simple sorting algorithm with O(n^2) complexity. [More](https://github.com/danilojezernik/js-interview-30/tree/master/en/Algorithms/sorting-algorithms/bubble-sort)
 2. Insertion Sort - Builds the final sorted array one item at a time, O(n^2) complexity.
 3. Selection Sort - Divides the input list into two parts: a sorted and an unsorted part, O(n^2) complexity.
 4. Merge Sort - A divide and conquer algorithm, O(n log n) complexity.
