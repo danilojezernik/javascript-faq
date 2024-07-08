@@ -13,7 +13,7 @@ Kako deluje algoritem mehurčastega urejanja:
 
 ### Implementacija mehurčkastega urejanja v JavaScript
 ```javascript
-function mehurcastoUrejanje(arr) {
+function mehurckastoUrejanje(arr) {
   // Pridobimo dolžino seznama
   let n = arr.length;
 

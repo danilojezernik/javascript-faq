@@ -1,5 +1,6 @@
 # JavaScript Interview Questions
 
+This repository contains a collection of JavaScript interview questions. It is my personal project to learn and understand JavaScript better. The questions are based on various sources, including the official JavaScript documentation, and other resources. The answers are not guaranteed to be correct, and I will be adding more questions and answers as I learn more about JavaScript.
 
 ## English
 
