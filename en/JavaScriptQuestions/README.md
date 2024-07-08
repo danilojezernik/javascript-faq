@@ -1,22 +1,3 @@
-1. [What is the use of the window object?](#1-what-is-the-use-of-the-window-object)
-2. [What are the different data types present in JavaScript?](#2-what-are-the-different-data-types-present-in-javascript)
-3. [What is the difference between undefined value and null value?](#3-what-is-the-difference-between-undefined-value-and-null-value)
-4. [What is this [[[ ]]]?](#4-what-is-this)
-5. [What are the differences between cookie, local storage, and session storage?](#5-what-are-the-differences-between-cookie-local-storage-and-session-storage)
-6. [What is the difference between setInterval and setTimeout?](#6-what-is-the-difference-between-setinterval-and-settimeout)
-7. [What are arrow functions? How are they different from normal functions?](#7-what-are-arrow-functions-how-are-they-different-from-normal-functions)
-8. [What is this keyword?](#8-what-is-this-keyword)
-9. [What are promises? How do you call a promise?](#9-what-are-promises-how-do-you-call-a-promise)
-10. [What is callback hell?](#10-what-is-callback-hell)
-11. [Explain closures!](#11-explain-closures)
-12. [What is the difference between `==` and `===` in JavaScript?](#what-is-difference)
-13. [How to access DOM elements using js?](#13-how-to-access-dom-elements-using-js)
-14. [What are higher order functions?](#14-what-are-higher-order-functions)
-15. [Explain destructuring in JavaScript!](#15-explain-destructuring-in-javascript)
-16. [What are spread and rest operators?](#16-what-are-spread-and-rest-operators)
-17. [What is function currying?](#17-what-is-function-currying)
-18. [Difference between `let`, `var` and `const`?](#let-war-const)
-
 ## 1. What is the use of the window object?
 
 The window object is the global object in a web browser. It represents the browser window or frame containing the HTML
