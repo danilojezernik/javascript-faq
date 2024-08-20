@@ -67,7 +67,7 @@ algorithm takes. Each Big O notation corresponds to a different curve on this gr
 - O(n^2) would be a steeper curve
 - O(2^n) would shoot up dramatically
 
-![Alt text](https://example.com/path/to/image.png)
+![Alt text](https://github.com/danilojezernik/javascript-faq/blob/master/media/algorithm.jpeg)
 
 ## Practical Considerations
 
