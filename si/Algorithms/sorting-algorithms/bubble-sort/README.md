@@ -23,9 +23,13 @@ function mehurckastoUrejanje(arr) {
     for (let j = 0; j < n - i - 1; j++) {
       // Primerjamo trenutni element z naslednjim
       if (arr[j] > arr[j + 1]) {
-        // Če je trenutni element večji od naslednjega, ju zamenjamo
-        // Uporabimo destrukturiranje za zamenjavo elementov
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        // Če je trenutni element večji od naslednjega elementa, ju zamenjaj
+        // Uporabimo začasno spremenljivko temp za shranjevanje vrednosti trenutnega elementa
+        const temp = arr[j];
+        // Postavimo vrednost naslednjega elementa na mesto trenutnega elementa
+        arr[j] = arr[j + 1];
+        // Postavimo vrednost iz temp (prvotna vrednost trenutnega elementa) na mesto naslednjega elementa
+        arr[j + 1] = temp;
       }
     }
     // Po vsaki iteraciji zunanje zanke je največji element nameščen na pravilno mesto

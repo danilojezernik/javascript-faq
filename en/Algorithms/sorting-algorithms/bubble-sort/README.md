@@ -24,8 +24,13 @@ function bubbleSort(arr) {
       // Compare the current element with the next element
       if (arr[j] > arr[j + 1]) {
         // If the current element is greater than the next element, swap them
-        // Use array destructuring to swap elements
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        // Use a temporary variable temp to store the value of the current element
+        const temp = arr[j];
+        // Set the value of the next element to the position of the current element
+        arr[j] = arr[j + 1];
+        // Set the value from temp (the original value of the current element) to the position of the next element
+        arr[j + 1] = temp;
+
       }
     }
     // After each iteration of the outer loop, the largest element is placed in its correct position
@@ -36,7 +41,7 @@ function bubbleSort(arr) {
 }
 
 // Example usage of the bubbleSort function
-let arr = [64, 34, 25, 12, 22, 11, 90]; // Create an unsorted array
+let arr = [ 64, 34, 25, 12, 22, 11, 90 ]; // Create an unsorted array
 let sortedArr = bubbleSort(arr); // Use the function to sort the array
 console.log("Sorted array:", sortedArr); // Print the sorted array
 
