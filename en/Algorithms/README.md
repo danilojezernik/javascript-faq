@@ -61,10 +61,10 @@ Here are some of the most common Big O notations:
 Imagine a graph where the x-axis represents the size of the input (n), and the y-axis represents the time or space an
 algorithm takes. Each Big O notation corresponds to a different curve on this graph:
 
-- O(1) would be a flat line
-- O(log n) would be a curve that rises slowly
-- O(n) would be a diagonal line going up
-- O(n^2) would be a steeper curve
+- O(1) would be a flat line (Constant)
+- O(log n) would be a curve that rises slowly (Divide and Conquer)
+- O(n) would be a diagonal line going up (Proportional)
+- O(n^2) would be a steeper curve (Loop within a loop)
 - O(2^n) would shoot up dramatically
 
 ![Alt text](https://github.com/danilojezernik/javascript-faq/blob/master/media/algorithm.jpeg)
